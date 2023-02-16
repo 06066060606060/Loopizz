@@ -17,130 +17,189 @@
         <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
             <nav x-data="{ isOpen: false }" class="py-6 lg:flex lg:justify-between lg:items-center">
                 <div class="flex items-center justify-between">
-                  <div>
-                    <a class="flex font-bold text-gray-700" href="/">
-                      <h1 class="py-4 pl-2 mt-1  font-bold text-blue-800 lg:mt-0 text-5xl hover:text-gray-700 tracking-widest ">LOOPIZZ</h1>
-                    </a>
-                  </div>
-            
-                  <!-- Mobile menu button -->
-                  <div class="flex lg:hidden">
-                    <button x-cloak @click="isOpen = !isOpen" type="button"
-                      class="text-gray-500 hover:text-gray-400 focus:outline-none focus:text-gray-400 " aria-label="toggle menu">
-                      <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                      </svg>
-            
-                      <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
+                    <div>
+                        <a class="flex font-bold text-gray-700" href="/">
+                            <h1
+                                class="py-4 pl-2 mt-1  font-bold text-blue-800 lg:mt-0 text-5xl hover:text-gray-700 tracking-widest ">
+                                LOOPIZZ</h1>
+                        </a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="flex lg:hidden">
+                        <button x-cloak @click="isOpen = !isOpen" type="button"
+                            class="text-gray-500 hover:text-gray-400 focus:outline-none focus:text-gray-400 "
+                            aria-label="toggle menu">
+                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                            </svg>
+
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            
+
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-                  class="absolute inset-x-0 z-50 w-screen px-6 py-4 mt-12 transition-all duration-300 ease-in-out shadow-md bg-gray-50 lg:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-                  <div class="mynav flex flex-col pb-4 space-y-4 align-baseline lg:mt-0 lg:flex-row lg:space-y-0 md:pb-0">
-                    <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/" 
-                      @click="isOpen = false">&nbsp;Accueil</a>
-                    <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/masterplans" 
-                      @click="isOpen = false">&nbsp;page 1</a>
-                    <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/streetscapes"
-                      @click="isOpen = false">&nbsp;page 2</a>
-                       <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/urbanscapes"
-                      @click="isOpen = false">&nbsp;Contact</a>
+                    class="absolute inset-x-0 z-50 w-screen px-6 py-4 mt-12 transition-all duration-300 ease-in-out shadow-md bg-gray-50 lg:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+                    <div
+                        class="mynav flex flex-col pb-4 space-y-4 align-baseline lg:mt-0 lg:flex-row lg:space-y-0 md:pb-0">
+                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/"
+                            @click="isOpen = false">&nbsp;Accueil</a>
+                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                            href="/masterplans" @click="isOpen = false">&nbsp;page 1</a>
+                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                            href="/streetscapes" @click="isOpen = false">&nbsp;page 2</a>
+                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                            href="/urbanscapes" @click="isOpen = false">&nbsp;Contact</a>
 
-                  </div>
-                  <div class="mt-8 lg:mt-0">
-                  <a href="submit_project"
-                    class="relative flex h-12 px-5 py-4 my-2 text-center mt-2 font-bold text-white shadow-lg prevent lg:ml-4 group rounded-xl bg-blue-700 hover:bg-blue-600 active:bg-blue-800">
-                    <span class="text-xs">Login</span>
-                  </a>
-                 </div>
+                    </div>
+
+                    <select title="lang" name="lang"
+                        class="bg-[#F8F8F8] inline-block h-7 md:h-12 px-3 py-1 ml-5 md:ml-2 leading-normal no-underline whitespace-no-wrap align-middle select-none font-bold text-gray-400 rounded-lg border border-gray-200"
+                        id="lang">
+                        <option class="text-center" id="optionx" value="/" selected>Fr</option>
+                        <option class="text-center" id="optionx" value="en">En</option>
+                    </select>
+
+                    <div class="mt-8 lg:mt-0">
+                        <a href="submit_project"
+                            class="relative flex h-12 px-5 py-4 my-2 text-center mt-2 font-bold text-white shadow-lg prevent lg:ml-4 group rounded-xl bg-blue-700 hover:bg-blue-600 active:bg-blue-800">
+                            <span class="text-xs">Login</span>
+                        </a>
+                    </div>
                 </div>
-              </nav>
-            
+            </nav>
+
             <script>
-            
-            document.addEventListener('DOMContentLoaded', function() {
-            
-              const currentLocation = location.href;
-              const menuItem = document.querySelectorAll('.mynav a');
-              const menuLength = menuItem.length;
-              for (let i = 0; i < menuLength; i++) {
-                if (menuItem[i].href === currentLocation) {
-                  menuItem[i].className = 'text-base font-semibold lg:mx-2 xl:mx-4 text-black';
-                }
-              }
-            });
+
+                document.addEventListener('DOMContentLoaded', function () {
+
+                    const currentLocation = location.href;
+                    const menuItem = document.querySelectorAll('.mynav a');
+                    const menuLength = menuItem.length;
+                    for (let i = 0; i < menuLength; i++) {
+                        if (menuItem[i].href === currentLocation) {
+                            menuItem[i].className = 'text-base font-semibold lg:mx-2 xl:mx-4 text-black';
+                        }
+                    }
+                });
             </script>
+        </div>
+    </div>
 
-            <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-16">
-                <!-- content - start -->
-                <div class="xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24">
-                    <p class="text-blue-700 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6">Very proud to introduce
-                    </p>
 
-                    <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">Exemple text here</h1>
-
-                    <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some
-                        simple filler text, also known as placeholder text. It shares some characteristics of a real
-                        written text but is random.</p>
-
-                    <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
-                        <a href="#"
-                            class="inline-block bg-blue-700 hover:bg-blue-600 active:bg-blue-800 focus-visible:ring ring-blue-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Inscrivez-Vous</a>
+    <section class="text-gray-600 bg-white">
+        <div class="container px-5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <img alt="feature" class="object-cover object-center h-full w-full" src="./img/droite.png">
+            </div>
+            <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
+                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
+                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
 
                     </div>
                 </div>
-                <!-- content - end -->
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
+                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
+                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
 
-                <!-- image - start -->
-                <div class="xl:w-6/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
-                    <img src="./img/droite.png"
-                        loading="lazy" alt="Photo by Fakurian Design"
-                        class="w-full h-full object-cover object-center" />
+                    </div>
                 </div>
-                <!-- image - end -->
-            </section>
-        </div>
-    </div>
-    <!-- hero - end -->
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
+                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
+                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
 
-    <!-- features - start -->
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-        
-       
-    </div>
-    <!-- features - end -->
+                    </div>
+
+                    <button
+                        class="mt-8 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        Inscrivez-vous
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <!-- logo cloud - start -->
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto py-16">
     <div class="bg-white py-6 sm:py-8 lg:py-12">
-       
 
-    </div>
-    <!-- logo cloud - end -->
+        <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-10">
+            <!-- content - start -->
+            <div class="xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24">
+               
 
-    <!-- stats - start -->
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-        
-    </div>
-    <!-- stats - end -->
+                <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">Professionnel Inscrivez-vous</h1>
 
-    <!-- team - start -->
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-        
-    </div>
-    <!-- team - end -->
+                <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some
+                    simple filler text, also known as placeholder text. It shares some characteristics of a real written
+                    text but is random.</p>
 
-    <!-- testemonials - start -->
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-        
+                    <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some
+                        simple filler text, also known as placeholder text. It shares some characteristics of a real written
+                        text but is random.</p>
+
+                <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
+                    <a href="#"
+                        class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Start
+                        now</a>
+
+                    <a href="#"
+                        class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Take
+                        tour</a>
+                </div>
+            </div>
+            <!-- content - end -->
+
+            <!-- image - start -->
+            <div class="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
+                <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
+                    loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- image - end -->
+        </section>
     </div>
-    <!-- testemonials - end -->
+</div>
 
     <!-- newsletter - start -->
     <div class="bg-white py-6 sm:py-8 lg:py-12">
@@ -161,8 +220,8 @@
                 </form>
 
                 <p class="text-gray-400 text-xs text-center">By signing up to our newsletter you agree to our <a
-                        href="#"
-                        class="hover:text-blue-700 active:text-blue-600 underline transition duration-100">Term of
+                        href="#" class="hover:text-blue-700 active:text-blue-600 underline transition duration-100">Term
+                        of
                         Service</a> and <a href="#"
                         class="hover:text-blue-700 active:text-blue-600 underline transition duration-100">Privacy
                         Policy</a>.</p>

@@ -14,13 +14,13 @@
 <body>
     <!-- hero - start -->
     <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+        <div class=" px-4 md:px-8 w-full mx-auto  bg-blue-700">
             <nav x-data="{ isOpen: false }" class="py-6 lg:flex lg:justify-between lg:items-center">
                 <div class="flex items-center justify-between">
                     <div>
                         <a class="flex font-bold text-gray-700" href="/">
                             <h1
-                                class="py-4 pl-2 mt-1  font-bold text-blue-800 lg:mt-0 text-5xl hover:text-gray-700 tracking-widest ">
+                                class="py-4 pl-2 mt-1  font-bold text-white lg:mt-0 text-5xl hover:text-gray-700 tracking-widest ">
                                 LOOPIZZ</h1>
                         </a>
                     </div>
@@ -48,29 +48,26 @@
                     class="absolute inset-x-0 z-50 w-screen px-6 py-4 mt-12 transition-all duration-300 ease-in-out shadow-md bg-gray-50 lg:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
                     <div
                         class="mynav flex flex-col pb-4 space-y-4 align-baseline lg:mt-0 lg:flex-row lg:space-y-0 md:pb-0">
-                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black" href="/"
+                        <a class="text-base font-semibold text-white lg:mx-2 xl:mx-4 hover:text-black" href="/"
                             @click="isOpen = false">&nbsp;Accueil</a>
-                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                        <a class="text-base font-semibold text-white lg:mx-2 xl:mx-4 hover:text-black"
                             href="/masterplans" @click="isOpen = false">&nbsp;page 1</a>
-                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                        <a class="text-base font-semibold text-white lg:mx-2 xl:mx-4 hover:text-black"
                             href="/streetscapes" @click="isOpen = false">&nbsp;page 2</a>
-                        <a class="text-base font-semibold text-gray-400 lg:mx-2 xl:mx-4 hover:text-black"
+                        <a class="text-base font-semibold text-white lg:mx-2 xl:mx-4 hover:text-black"
                             href="/urbanscapes" @click="isOpen = false">&nbsp;Contact</a>
 
                     </div>
 
                     <select title="lang" name="lang"
-                        class="bg-[#F8F8F8] inline-block h-7 md:h-12 px-3 py-1 ml-5 md:ml-2 leading-normal no-underline whitespace-no-wrap align-middle select-none font-bold text-gray-400 rounded-lg border border-gray-200"
+                        class="bg-white inline-block h-7 md:h-12 px-3 py-1 ml-5 md:ml-2 leading-normal no-underline whitespace-no-wrap align-middle select-none font-bold text-black rounded-xl border border-gray-200"
                         id="lang">
                         <option class="text-center" id="optionx" value="/" selected>Fr</option>
                         <option class="text-center" id="optionx" value="en">En</option>
                     </select>
 
                     <div class="mt-8 lg:mt-0">
-                        <a href="submit_project"
-                            class="relative flex h-12 px-5 py-4 my-2 text-center mt-2 font-bold text-white shadow-lg prevent lg:ml-4 group rounded-xl bg-blue-700 hover:bg-blue-600 active:bg-blue-800">
-                            <span class="text-xs">Login</span>
-                        </a>
+                       <button class="ml-4 bg-white text-black font-bold py-2 px-4 h-12 rounded-xl hover:bg-gray-200">Connexion</button>
                     </div>
                 </div>
             </nav>
@@ -92,114 +89,38 @@
         </div>
     </div>
 
-
-    <section class="text-gray-600 bg-white">
-        <div class="container px-5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-                <img alt="feature" class="object-cover object-center h-full w-full" src="./img/droite.png">
-            </div>
-            <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-                <div class="flex flex-col mb-10 lg:items-start items-center">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
-                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-
-                    </div>
-                </div>
-                <div class="flex flex-col mb-10 lg:items-start items-center">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                            <circle cx="6" cy="6" r="3"></circle>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
-                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-
-                    </div>
-                </div>
-                <div class="flex flex-col mb-10 lg:items-start items-center">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
-                        <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar
-                            toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-
-                    </div>
-
-                    <button
-                        class="mt-8 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                        Inscrivez-vous
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
     <!-- logo cloud - start -->
-    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto py-16">
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-
-        <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-10">
-            <!-- content - start -->
-            <div class="xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24">
-               
-
-                <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">Professionnel Inscrivez-vous</h1>
-
-                <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some
-                    simple filler text, also known as placeholder text. It shares some characteristics of a real written
-                    text but is random.</p>
-
-                    <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some
-                        simple filler text, also known as placeholder text. It shares some characteristics of a real written
-                        text but is random.</p>
-
-                <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
-                    <a href="#"
-                        class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Start
-                        now</a>
-
-                    <a href="#"
-                        class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Take
-                        tour</a>
+   
+        <section class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+            <div class="flex flex-wrap justify-between mb-8 md:mb-16">
+              <div class="w-full lg:w-1/3 flex flex-col justify-center lg:pt-48 lg:pb-24 mb-6 sm:mb-12 lg:mb-0">
+                <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-8">Find your<br />style online</h1>
+        
+                <p class="max-w-md text-gray-500 xl:text-lg leading-relaxed">This is a section of some simple filler text, also known as placeholder text. It shares characteristics of real text.</p>
+              </div>
+        
+              <div class="w-full lg:w-2/3 flex mb-12 md:mb-16">
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden relative z-10 top-12 md:top-16 left-12 md:left-16 -ml-12 lg:ml-0">
+                  <img src="https://images.unsplash.com/photo-1542340916-951bb72c8f74?auto=format&q=75&fit=crop&w=550&h=550" loading="lazy" alt="Photo by Kaung Htet" class="w-full h-full object-cover object-center" />
                 </div>
+        
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1586295166487-b265f7e83a7f?auto=format&q=75&fit=crop&w=550&h=550" loading="lazy" alt="Photo by Manny Moreno" class="w-full h-full object-cover object-center" />
+                </div>
+              </div>
             </div>
-            <!-- content - end -->
-
-            <!-- image - start -->
-            <div class="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
-                <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-                    loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center" />
+        
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+              <div class="w-64 h-12 flex border rounded-lg overflow-hidden divide-x">
+                <a href="#" class="w-1/3 flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 text-gray-500 transition duration-100">Men</a>
+                <a href="#" class="w-1/3 flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 text-gray-500 transition duration-100">Women</a>
+                <a href="#" class="w-1/3 flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 text-gray-500 transition duration-100">Teens</a>
+              </div>
+        
+            
             </div>
-            <!-- image - end -->
-        </section>
-    </div>
-</div>
+          </section>
+   
 
     <!-- newsletter - start -->
     <div class="bg-white py-6 sm:py-8 lg:py-12">
